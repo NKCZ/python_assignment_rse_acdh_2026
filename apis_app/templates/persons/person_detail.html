@@ -1,0 +1,37 @@
+{% extends "persons/base.html" %}
+{% block title %}{{ display_name }}{% endblock %}
+
+{% block extra_head %}
+<style>
+  .person-detail-table {
+    margin-top: 1rem;
+    border-collapse: collapse;
+  }
+
+  .person-detail-label {
+    padding: 0.3rem 1.5rem 0.3rem 0;
+    color: #777;
+    font-size: 0.85rem;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+{% if person %}
+  <h1>{{ display_name }}</h1>
+
+  <table class="person-detail-table">
+    <tr><td class="person-detail-label">Forename</td><td>{{ person.forename|default:"NA" }}</td></tr>
+    <tr><td class="person-detail-label">Surname</td><td>{{ person.surname|default:"NA" }}</td></tr>
+    <tr><td class="person-detail-label">Gender</td><td>{{ person.gender|default:"NA" }}</td></tr>
+    <tr><td class="person-detail-label">Date of birth</td><td>{{ person.date_of_birth|default:"NA" }}</td></tr>
+    <tr><td class="person-detail-label">Date of death</td><td>{{ person.date_of_death|default:"NA" }}</td></tr>
+    <tr><td class="person-detail-label">Profession</td><td>{{ profession_str|default:"NA" }}</td></tr>
+    </tr>
+  </table>
+
+{% else %}
+  <h1>Person not found</h1>
+  <p><a href="{% url 'apis_app:list' %}">Back to directory</a></p>
+{% endif %}
+{% endblock %}

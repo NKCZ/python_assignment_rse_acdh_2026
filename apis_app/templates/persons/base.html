@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}People Directory{% endblock %}</title>
+  <style>
+    body { font-family: sans-serif; max-width: 900px; margin: 2rem auto; padding: 0 1rem; color: #111; }
+    a { color: #111; }
+    a:hover { color: #666; }
+    nav { margin-bottom: 2rem; font-size: 0.85rem; color: #777; }
+    nav a { color: #777; text-decoration: none; }
+    nav a:hover { color: #111; }
+    .error { color: rgb(255, 0, 0); font-size: 0.9rem; margin-bottom: 1rem; }
+  </style>
+</head>
+<body>
+  <nav><a href="{% url 'apis_app:list' %}">Directory</a></nav>
+  {% if error %}<p class="error">{{ error }}</p>{% endif %}
+  {% block content %}{% endblock %}
+</body>
+</html>
