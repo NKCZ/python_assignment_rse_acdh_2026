@@ -114,7 +114,7 @@ There are some additional files generated through the Django setup process, but 
 
 ---
 ## AI Assistance
-I used Visual Studio Code with  the<a href="https://github.com/features/copilot" target="_blank">Github Copilot</a> auto-completion function. 
+I used Visual Studio Code with the <a href="https://github.com/features/copilot" target="_blank">Github Copilot</a> auto-completion function. 
 
 Github Copilot is an AI pair programming tool that provides code suggestions and completions based on the context. 
 
@@ -123,6 +123,8 @@ I usually start writing a one-line comment describing the functionality I want t
 I find that this approach allows to quickly generate code that is often quite close to what I want to achieve, while still giving me the flexibility to make adjustments as needed.
 
 When it does not go in the direction I wish, I simply write the next lines myself, which usually leads to suggestions that are more in line with what I want to achieve.
+
+The same approach was used for this assignment.
 
 
 
